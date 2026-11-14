@@ -4,7 +4,7 @@ import ResponsiveNavLink from '@/Components/ResponsiveNavLink';
 import { Link, usePage } from '@inertiajs/react';
 import { useState } from 'react';
 
-const navigation = [
+const citizenNavigation = [
     { label: 'Inicio', routeName: 'dashboard' },
     { label: 'Vehículos', routeName: 'vehiculos.index' },
     { label: 'Licencias', routeName: 'licencias.index' },
@@ -14,6 +14,9 @@ const navigation = [
 
 export default function AuthenticatedLayout({ header, children }) {
     const user = usePage().props.auth.user;
+    const navigation = user.rol === 'administrador'
+        ? [...citizenNavigation, { label: 'Registrar vehículos', routeName: 'admin.vehiculos.create' }]
+        : citizenNavigation;
     const [showingNavigationDropdown, setShowingNavigationDropdown] = useState(false);
 
     return (
