@@ -1,9 +1,9 @@
 <?php
 
-namespace App\\Http\\Controllers;
+namespace App\Http\Controllers;
 
-use Illuminate\\Support\\Facades\\DB;
-use Inertia\\Inertia;
+use Illuminate\Support\Facades\DB;
+use Inertia\Inertia;
 
 class EsquelaController extends Controller
 {
