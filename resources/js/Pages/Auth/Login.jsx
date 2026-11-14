@@ -22,9 +22,9 @@ export default function Login({ status }) {
             <div className="w-full max-w-md bg-[#f4f7fb] rounded-[2rem] shadow-2xl p-8 sm:p-10 mx-4 flex flex-col items-center">
                 <div className="bg-[#3366d6] rounded-2xl w-full py-4 flex items-center justify-center shadow-inner mb-6">
                     <img
-                        src="/images/sertracen_vmt.png"
+                        src="/images/sertracen_vmt.svg"
                         alt="Logos VMT y Sertracen"
-                        className="h-8 object-contain filter brightness-0 invert"
+                        className="h-9 max-w-full object-contain"
                     />
                 </div>
 
